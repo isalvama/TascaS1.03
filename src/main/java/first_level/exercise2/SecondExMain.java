@@ -1,4 +1,4 @@
-package first_level.ex2;
+package first_level.exercise2;
 
 import java.util.*;
 
