@@ -1,7 +1,6 @@
-package first_level.ex1;
+package first_level.exercise1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -19,12 +18,7 @@ public class FirstExMain {
         Month october = new Month("October");
         Month november = new Month("November");
         Month december = new Month("December");
-/*
 
-Converteix després l’ArrayList en un HashSet i verifica que no es permeten duplicats.
-
-Finalment, recorre la col·lecció amb un bucle for i amb un Iterator.
- */
         // Create and add 11 Month objects to an ArrayList, leaving "August" object out
         ArrayList<Month> monthArrayList = new ArrayList<>();
         monthArrayList.add(january);
