@@ -1,4 +1,4 @@
-package first_level.ex3;
+package first_level.exercise3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,21 +15,22 @@ public class CountriesAndCapitalsData {
         this.countriesList = new ArrayList<>();
     }
 
-    public void setCountriesList(ArrayList<String> countriesList) {
-        this.countriesList = countriesList;
-    }
-
-    public void setCountriesCapitalsMap(HashMap<String, String> countriesCapitalsMap) {
-        this.countriesCapitalsMap = countriesCapitalsMap;
+    public HashMap<String, String> getCountriesCapitalsMap() {
+        return countriesCapitalsMap;
     }
 
     public List<String> getCountriesList() {
         return copyOf(countriesList);
     }
 
-    public HashMap<String, String> getCountriesCapitalsMap() {
-        return countriesCapitalsMap;
+    public void setCountriesCapitalsMap(HashMap<String, String> countriesCapitalsMap) {
+        this.countriesCapitalsMap = countriesCapitalsMap;
     }
+
+    public void setCountriesList(ArrayList<String> countriesList) {
+        this.countriesList = countriesList;
+    }
+
 
     @Override
     public String toString() {
