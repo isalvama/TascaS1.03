@@ -1,17 +1,12 @@
-package first_level.ex3;
-
-import java.util.ArrayList;
-import java.util.HashMap;
+package first_level.exercise3;
 
 public class Game {
     private String userName;
     private int points;
 
-
     public Game(String userName) {
         this.userName = userName;
         this.points = 0;
-
     }
 
     public String getUserName() {
@@ -25,6 +20,7 @@ public class Game {
     public int getPoints() {
         return points;
     }
+
     public int setPoints(int points) {
         return this.points = points;
     }
