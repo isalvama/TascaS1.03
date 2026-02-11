@@ -1,15 +1,6 @@
 package second_level.exercise1;
 
-/*
-Exercici 2 — Ordenació múltiple
-A partir de la classe Restaurant del programa anterior, implementa la funcionalitat
-necessària perquè els objectes es puguin ordenar alfabèticament pel nom i, en cas que coincideixin,
-per puntuació en ordre descendent.
-
-Pots fer-ho implementant la interfície Comparable o mitjançant un Comparator, segons consideris més adient.
- */
-
- public class Restaurant {
+ public class Restaurant implements Comparable<Restaurant> {
     private String name;
     private int punctuation;
 
@@ -50,5 +41,10 @@ Pots fer-ho implementant la interfície Comparable o mitjançant un Comparator, 
                  "name='" + name + '\'' +
                  ", punctuation=" + punctuation +
                  '}';
+     }
+
+     @Override
+     public int compareTo(Restaurant r) {
+        return this.punctuation - r.punctuation;
      }
  }
