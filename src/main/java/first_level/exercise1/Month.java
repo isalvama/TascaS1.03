@@ -1,4 +1,4 @@
-package first_level.ex1;
+package first_level.exercise1;
 
 public class Month {
     private String name;
