@@ -1,11 +1,6 @@
-package second_level.Ex1;
+package second_level.exercise1;
 
 /*
-Crea una classe anomenada Restaurant amb dos atributs: nom (String) i puntuació (int).
-Implementa els mètodes necessaris (equals() i hashCode()) perquè no es puguin introduir
-objectes Restaurant amb el mateix nom i la mateixa puntuació dins un HashSet.
-
-
 Exercici 2 — Ordenació múltiple
 A partir de la classe Restaurant del programa anterior, implementa la funcionalitat
 necessària perquè els objectes es puguin ordenar alfabèticament pel nom i, en cas que coincideixin,
@@ -47,5 +42,13 @@ Pots fer-ho implementant la interfície Comparable o mitjançant un Comparator, 
          hash = 31 * hash + (int) punctuation;
          hash = 31 * hash + (name == null ? 0 : name.hashCode());
          return hash;
+     }
+
+     @Override
+     public String toString() {
+         return "Restaurant{" +
+                 "name='" + name + '\'' +
+                 ", punctuation=" + punctuation +
+                 '}';
      }
  }
