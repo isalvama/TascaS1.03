@@ -15,11 +15,11 @@ public class SecondExMain {
         // Create a list iterator over the elements in the listA (in proper sequence), placing the cursor at the last position in the list.
         ListIterator<Integer> listIterator = listA.listIterator(listA.size());
 
-
         // Add the elements of listA in listB in reverse order: while there is an element behind, the previous element is being added in listB
         while(listIterator.hasPrevious()){
             listB.add(listIterator.previous());
         }
+
         System.out.println(listB);
     }
 }
