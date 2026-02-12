@@ -1,4 +1,4 @@
-package second_level.exercise1;
+package second_level.exercise1And2;
 
 import java.util.Comparator;
 
