@@ -1,6 +1,6 @@
 package second_level.exercise1;
 
- public class Restaurant implements Comparable<Restaurant> {
+ public class Restaurant {
     private String name;
     private int punctuation;
 
@@ -43,8 +43,4 @@ package second_level.exercise1;
                  '}';
      }
 
-     @Override
-     public int compareTo(Restaurant r) {
-        return this.punctuation - r.punctuation;
-     }
  }
