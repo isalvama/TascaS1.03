@@ -15,7 +15,26 @@ The indicated exercises are designed to understand how Java Collections work, fo
 ## Project Structure
 ```
 TascaS1.03/
-
+src/
+└── main/
+    └── java/
+       └── first_level/
+            └── exercise1/
+                ├── FirstExMain.java
+                └── Month.java
+            └── exercise2/
+                └── SecondExMain.java
+            └── exercise3/
+                ├── CountriesAndCapitalData.java
+                ├── FileReading.java
+                ├── Game.java
+                ├── GameProgram.java
+                └── ThirdExMain.java
+        └── second_level/
+            └── exercise1And2/
+                ├── Main.java
+                ├── NameCompare.java
+                └── Restaurant.java
 ```
 
 ## Installation
