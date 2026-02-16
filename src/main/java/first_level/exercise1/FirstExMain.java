@@ -3,34 +3,18 @@ package first_level.exercise1;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.List;
 
 public class FirstExMain {
     public static void main (String[] args){
-        Month january = new Month("January");
-        Month february = new Month("February");
-        Month march = new Month("March");
-        Month april = new Month("April");
-        Month may = new Month("May");
-        Month june = new Month("June");
-        Month july = new Month("July");
-        Month august = new Month("August");
-        Month september = new Month("September");
-        Month october = new Month("October");
-        Month november = new Month("November");
-        Month december = new Month("December");
 
-        ArrayList<Month> monthArrayList = new ArrayList<>();
-        monthArrayList.add(january);
-        monthArrayList.add(february);
-        monthArrayList.add(march);
-        monthArrayList.add(april);
-        monthArrayList.add(may);
-        monthArrayList.add(june);
-        monthArrayList.add(july);
-        monthArrayList.add(september);
-        monthArrayList.add(october);
-        monthArrayList.add(november);
-        monthArrayList.add(december);
+        Month august = new Month("August");
+
+        List<Month> monthArrayList = new ArrayList<Month>(List.of(new Month("January"), new Month("February"), new Month("March"), new Month("April"), new Month("May"), new Month("June"), new Month("July"), new Month("September"),
+       new Month("October"),
+        new Month("November"),
+        new Month("December")));
+
 
         System.out.println("monthArrayList without 'August': " + monthArrayList);
 
@@ -64,7 +48,7 @@ public class FirstExMain {
         }
 
     }
-    public static HashSet<Month> convertMonthArrayListToHashSet(ArrayList<Month> monthsArrayInput){
+    public static HashSet<Month> convertMonthArrayListToHashSet(List<Month> monthsArrayInput){
         return new HashSet<>(monthsArrayInput);
 
     }
