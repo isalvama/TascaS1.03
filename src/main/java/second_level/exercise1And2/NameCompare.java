@@ -9,7 +9,7 @@ public class NameCompare implements Comparator<Restaurant> {
         if (!(rest1.getName().equals(rest2.getName()))){
            return rest1.getName().compareTo(rest2.getName());
         }
-        return Double.compare(rest2.getPunctuation(), rest1.getPunctuation());
+        return Integer.compare(rest2.getPunctuation(), rest1.getPunctuation());
     }
 
 }
