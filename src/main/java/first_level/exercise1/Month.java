@@ -1,7 +1,21 @@
 package first_level.exercise1;
 
+import java.util.Objects;
+
 public class Month {
     private String name;
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Month month = (Month) o;
+        return Objects.equals(name, month.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
+    }
 
     public Month(String name){
         this.name = name;
