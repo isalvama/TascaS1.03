@@ -1,6 +1,8 @@
 package second_level.exercise1And2;
 
- public class Restaurant {
+import java.util.Objects;
+
+public class Restaurant {
     private String name;
     private int punctuation;
 
@@ -17,25 +19,19 @@ package second_level.exercise1And2;
          return punctuation;
      }
 
-     @Override
-    public boolean equals(Object object){
-        if (this == object) return true;
-        if(!(object instanceof Restaurant)) return false;
-
-        Restaurant otherObj = (Restaurant) object;
-        boolean nameEquals = (this.name == null && otherObj.getName() == null) || (this.name != null &&  this.name.equals(otherObj.name));
-        return this.punctuation == otherObj.getPunctuation() && nameEquals;
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Restaurant that = (Restaurant) o;
+        return punctuation == that.punctuation && Objects.equals(name, that.name);
     }
 
-     @Override
-     public int hashCode() {
-         int hash = 7;
-         hash = 31 * hash + (int) punctuation;
-         hash = 31 * hash + (name == null ? 0 : name.hashCode());
-         return hash;
-     }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, punctuation);
+    }
 
-     @Override
+    @Override
      public String toString() {
          return "Restaurant{" +
                  "name='" + name + '\'' +
