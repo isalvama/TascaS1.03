@@ -101,22 +101,20 @@ This class acts as a data container. It stores the information loaded from the t
 - A `HashMap<String, String>` for quick lookup of a capital given a country name.
 - An `ArrayList<String>` containing only the country names, which facilitates the selection of a random country for the game questions.
 
-#### FileReading class
-A utility class responsible for persistence logic. It uses `BufferedReader` to read the `countries.txt` file line by line. Each line is split into two parts using a whitespace delimiter; the first part is treated as the country and the second as the capital. The class handles the population of the `CountriesAndCapitalsData` object and ensures that empty lines or malformed data are ignored.
-
 #### Game class
 A simple model (POJO) used to store the state of a single game session, including the `userName` and the final `points` achieved by the player.
 
-#### GameProgram interface
-This interface contains the core logic of the game within a static method. The program:
+#### GameMachine class
+This class contains the core logic of the game within the `program()` method. 
+The program:
 1.  Requests the player's name and initializes a `Game` object.
-2.  Reads the data from the external file.
+2.  Reads the data from the external file with `loadCountries()` method: it uses `BufferedReader` to read the `countries.txt` file line by line. Each line is split into two parts using a whitespace delimiter; the first part is treated as the country and the second as the capital. The method enters the data in the class attributes.
 3.  Runs a loop of **10 rounds** where a country is chosen randomly.
 4.  Standardizes the user's input (ensuring the first letter is capitalized) to compare it with the correct value in the `HashMap`.
-5.  Updates the score and finally records the game results in a list of `playedGames`.
+5.  Updates the score and finally records the game results in the list attribute of `playedGames`.
 
 #### ThirdExMain class
-The entry point for this exercise. It simply triggers the `GameProgram.program()` method to start the interactive console application.
+The entry point for this exercise. It simply instances `GameMachine` and triggers the `program()` method to start the interactive console application.
 
 
 ## Second Level
