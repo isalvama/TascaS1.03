@@ -9,20 +9,7 @@ public class Game {
         this.points = 0;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public int getPoints() {
-        return points;
-    }
-
-    public int setPoints(int points) {
-        return this.points = points;
+    public void setPoints(int points) {this.points = points;
     }
 
     @Override
