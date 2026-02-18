@@ -5,6 +5,10 @@ import java.util.Objects;
 public class Month {
     private String name;
 
+    public Month(String name){
+        this.name = name;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
@@ -15,10 +19,6 @@ public class Month {
     @Override
     public int hashCode() {
         return Objects.hashCode(name);
-    }
-
-    public Month(String name){
-        this.name = name;
     }
 
     @Override
