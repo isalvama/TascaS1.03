@@ -16,27 +16,14 @@ public class Main {
         Restaurant rest7 = new Restaurant("restD", 4);
         Restaurant rest8 = new Restaurant("restD", 3);
 
-
-
         HashSet<Restaurant> restaurantsSet = new HashSet<>();
-        restaurantsSet.add(rest1);
-        restaurantsSet.add(rest3);
-        restaurantsSet.add(rest2);
-        restaurantsSet.add(rest4);
-        restaurantsSet.add(rest5);
-        restaurantsSet.add(rest6);
-        restaurantsSet.add(rest7);
-        restaurantsSet.add(rest8);
-
+        Collections.addAll(restaurantsSet, rest1, rest2, rest3, rest4, rest5, rest6, rest7, rest8);
         System.out.println(restaurantsSet);
 
         // Exercise 2 instructions
         ArrayList<Restaurant> restaurantArrayList = new ArrayList<>(restaurantsSet);
 
-        Collections.sort(restaurantArrayList, new NameCompare());
+        restaurantArrayList.sort(new NameCompare());
         System.out.println(restaurantArrayList);
-
-
-
     }
 }
