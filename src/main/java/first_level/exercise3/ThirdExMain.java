@@ -10,6 +10,4 @@ public class ThirdExMain {
         System.out.println(game.getPlayedGames());
 
     }
-
-
 }
